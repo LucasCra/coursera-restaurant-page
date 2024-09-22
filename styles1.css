@@ -1,0 +1,254 @@
+/* Global Styles */
+:root {
+  --primary-color: #61122f;
+  --secondary-color: #f6b319;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Oxygen', sans-serif;
+  background-color: var(--primary-color);
+}
+
+h1, p {
+  color: var(--primary-color);
+}
+
+img {
+  border-radius: 10px;
+  margin: 10px;
+}
+
+header {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  height: 134px;
+  max-width: 100%;
+  padding-top: 8px;
+  padding-right: 0px !important;
+  margin: 0px
+}
+/* Header Styles */
+#header-bar {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  max-height: 134px;
+  max-width: 100%;
+}
+
+#header-container {
+  max-width: 1180px;
+}
+
+#header-brand {
+  align-items: center;
+  color: var(--primary-color);
+}
+
+#header-brand-text {
+  font-size: 1.5em;
+  color: var(--primary-color);
+}
+
+#logo {
+  width: 120px;
+  height: 120px;
+  margin-left: 0;
+}
+
+/* Navigation Styles */
+.nav-link {
+  color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  transform: translateY(-5px);
+}
+
+.navbar-collapse {
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  width: 100%;
+  color: var(--primary-color);
+}
+
+#navbar-toggler:hover,
+#navbar-toggler:focus {
+  background-color: var(--primary-color);
+}
+
+#navbar-toggler:hover .navbar-toggler-icon,
+#navbar-toggler:focus .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(246, 179, 25, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Main Content Styles */
+#main-content {
+  background-color: var(--primary-color);
+  width: 100%;
+  max-width: 1180px;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#restaurant-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 0;
+}
+
+.content-tile {
+  width: 350px;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  flex: 0 0 auto;
+  border-radius: 10px;
+}
+
+.tile-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease;
+}
+
+.content-tile:hover .tile-image {
+  transform: scale(1.1);
+}
+
+.tile-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 7px;
+  text-align: center;
+  height: 40px;
+}
+
+.tile-footer h2 {
+  color: white;
+  margin: 0;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+#map {
+  flex-grow: 1;
+  min-width: 350px;
+}
+
+#map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 40px);
+}
+
+/* Media Queries */
+@media (max-width: 767px) {
+  .content-tile, #map {
+    height: 200px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  #header-bar {
+    max-height: 117px;
+  }
+}
+
+/* Custom container max-widths */
+@media (min-width: 576px) {
+  .container, .container-sm { max-width: 540px; }
+}
+
+@media (min-width: 768px) {
+  .container, .container-sm, .container-md { max-width: 720px; }
+}
+
+@media (min-width: 992px) {
+  .container, .container-sm, .container-md, .container-lg { max-width: 960px; }
+  .content-grid {
+    padding: 10px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container, .container-sm, .container-md, .container-lg, .container-xl { max-width: 1140px; }
+}
+
+@media (min-width: 1400px) {
+  .container, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl { max-width: 1320px; }
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin-top: auto;
+}
+
+footer .container{
+  max-width: 1170px;
+}
+
+footer h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+footer p {
+    color: white;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--secondary-color);
+}
+
+#map-link:hover {
+    color: var(--secondary-color) !important;
+}

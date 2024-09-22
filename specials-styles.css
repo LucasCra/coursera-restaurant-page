@@ -1,0 +1,99 @@
+.specials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+    max-width: 1180px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.special-item {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto; 
+    padding: 0;
+    min-width: 350px;
+    max-width: calc(100% - 10px);
+    margin: 5px;
+    position: relative;
+}
+
+.special-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Updated styles for the ellipse */
+.special-label {
+    position: absolute;
+    left: 10px;
+    background-color: #61122f;
+    color: #f6b319;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.special-item div {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+}
+
+.special-item h2,
+.special-item p {
+    color: #f6b319;
+    padding: 10px;
+    text-align: center; /* Center text */
+    margin: 0; /* Remove default margins */
+}
+
+.text-center {
+    width: 350px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+#specials-title {
+    padding: 0px;
+    background-color: #f6b319;
+    color: #61122f;
+    display: flex;
+    margin: 0 auto;
+    width: 350px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+#specials-grid {
+    max-width: 1180px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#specials-main {
+    margin-top: 15px;
+    padding: 0px;
+
+}
+
+.col-12 {
+    width: 350px;
+    height: 250px;
+}
+
+.special-item div {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+}

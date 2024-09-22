@@ -1,0 +1,62 @@
+#menu-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* This will center the content vertically */
+}
+
+#menu-title {
+    padding: 0px;
+    background-color: #f6b319;
+    color: #61122f;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    margin: 0 auto;
+    width: 350px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+#menu-grid {
+    margin: 15px 0px;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.content-tile {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    height: 200px;
+    text-decoration: none;
+    margin: 10px 0;
+    width: 350px;
+}
+
+/* ... rest of the CSS remains the same ... */
+
+@media (max-width: 992px) {
+    #menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    #menu-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    #menu-title h1 {
+        font-size: 2rem; /* Smaller font size for mobile */
+    }
+}
